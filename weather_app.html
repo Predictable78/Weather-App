@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+  <main class="wrapper">
+    <!-- Random weather header image -->
+    <div class="header-image-container">
+      <img id="header-image" src="" alt="Weather background" class="header-image">
+    </div>
+    
+    <h1>Weather App</h1>
+    <!-- form for user to enter a city name -->
+    <form id="form-search" name="weather-form">
+      <input id="city-input" name="city-input" placeholder="Enter city (e.g., Seattle)" required />
+      <button type="submit" name="submit-btn">Get Weather</button>
+    </form>
+
+    <!-- area to show status messages while loading -->
+    <div id="msg" name="status-message" aria-live="polite"></div>
+
+    <!-- area to show error messages -->
+    <div id="problem" name="error-message" role="alert"></div>
+
+    <!-- section that displays the weather data once loaded -->
+    <section id="output" name="weather-output" hidden>
+      <h2 id="location" name="location-name"></h2>
+      <p><strong>Temperature:</strong> <span id="temperature" name="temperature-value"></span> °C</p>
+      <p><strong>Wind:</strong> <span id="wind-speed" name="wind-speed-value"></span> m/s</p>
+      <p><strong>Condition:</strong> <span id="weather" name="weather-condition"></span></p>
+    </section>
+
+    <!-- credit to api provider -->
+    <small>Powered by <a href="https://open-meteo.com" target="_blank" rel="noreferrer">Open-Meteo</a></small>
+  </main>
+
+  <script src="weather.js"></script>
+</body>
+</html>
